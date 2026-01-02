@@ -1,0 +1,18 @@
+langchain
+langgraph
+langchain-openai
+langchain-community
+chromadb
+streamlit
+pypdf
+marker-pdf
+arxiv
+google-search-results
+python-dotenv
+openai
+pydantic
+tiktoken
+sentence-transformers
+# For visual agent
+networkx
+matplotlib
