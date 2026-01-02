@@ -1,6 +1,11 @@
 import streamlit as st
 import os
+import sys
 import tempfile
+
+# Add project root to sys.path to allow 'from app...' imports
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from app.ui.sidebar import render_sidebar
 from app.ui.chat import render_chat_history, render_plan_status, render_mermaid
 from app.agents.graph import build_graph
