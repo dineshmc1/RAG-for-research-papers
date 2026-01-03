@@ -1,3 +1,11 @@
+import sys
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parents[1]
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
+
 import streamlit as st
 import os
 import sys
@@ -6,10 +14,10 @@ import tempfile
 # Add project root to sys.path to allow 'from app...' imports
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from ui.sidebar import render_sidebar
-from ui.chat import render_chat_history, render_plan_status, render_mermaid
-from agents.graph import build_graph
-from rag.ingestion import ingest_pdf
+from app.ui.sidebar import render_sidebar
+from app.ui.chat import render_chat_history, render_plan_status, render_mermaid
+from app.agents.graph import build_graph
+from app.rag.ingestion import ingest_pdf
 from langchain_core.messages import HumanMessage
 
 st.set_page_config(page_title="Agentic Research Lab", layout="wide")

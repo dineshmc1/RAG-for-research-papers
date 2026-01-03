@@ -16,3 +16,4 @@ sentence-transformers
 # For visual agent
 networkx
 matplotlib
+langchain-huggingface
